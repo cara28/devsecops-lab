@@ -1,0 +1,21 @@
+name: Pipeline DevSecOps
+
+# Equivalente a configurar el Webhook en Jenkins
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # Equivalente a tu bloque 'stages' en Groovy
+  escaneo_basico:
+    runs-on: ubuntu-latest # GitHub nos regala un servidor Linux temporal
+
+    steps:
+      # Equivalente a tu stage de "Clonar Repositorio"
+      - name: Clonar código
+        uses: actions/checkout@v4
+
+      # Equivalente a ejecutar 'sh' en Jenkins
+      - name: Saludo desde el servidor en la nube
+        run: echo "¡Mi primer pipeline en YAML está funcionando!"
