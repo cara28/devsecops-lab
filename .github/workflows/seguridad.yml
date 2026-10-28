@@ -21,4 +21,20 @@ jobs:
         run: echo "¡Mi primer pipeline en YAML está funcionando!"
 
 
-# testupdate
+# NUEVO: Ejecución del escaneo SAST
+      - name: Escaneo de seguridad estático (SAST) con Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: "p/default"
+
+
+
+
+
+
+
+
+
+
+
+
